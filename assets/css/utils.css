@@ -1,0 +1,40 @@
+/* ==========================================================
+   POOJITH PORTFOLIO
+   File: utils.css
+========================================================== */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-32 {
+
+    margin-top: var(--space-32);
+
+}
+
+.mt-64 {
+
+    margin-top: var(--space-64);
+
+}
+
+.mb-32 {
+
+    margin-bottom: var(--space-32);
+
+}
+
+.mb-64 {
+
+    margin-bottom: var(--space-64);
+
+}

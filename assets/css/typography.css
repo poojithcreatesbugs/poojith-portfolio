@@ -1,0 +1,163 @@
+/* ==========================================================
+   POOJITH PORTFOLIO
+   File: typography.css
+   Version: 1.0
+   Editorial Luxury Typography System
+========================================================== */
+
+/* ==========================================================
+   Headings
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+}
+
+h1 {
+    font-size: var(--fs-hero);
+}
+
+h2 {
+    font-size: var(--fs-h1);
+}
+
+h3 {
+    font-size: var(--fs-h2);
+}
+
+h4 {
+    font-size: var(--fs-h3);
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+/* ==========================================================
+   Paragraphs
+========================================================== */
+
+p {
+    color: var(--color-text-secondary);
+    font-size: var(--fs-body);
+    line-height: 1.8;
+    max-width: 65ch;
+}
+
+/* ==========================================================
+   Links
+========================================================== */
+
+a {
+    color: inherit;
+    transition: var(--transition-medium);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* ==========================================================
+   Display Heading
+========================================================== */
+
+.display-title {
+
+    font-family: var(--font-display);
+
+    font-size: clamp(5rem, 13vw, 11rem);
+
+    font-weight: 500;
+
+    line-height: .88;
+
+    letter-spacing: -.05em;
+
+    text-transform: uppercase;
+
+    color: var(--color-text);
+
+}
+
+/* ==========================================================
+   Section Title
+========================================================== */
+
+.section-title {
+
+    margin-bottom: var(--space-32);
+
+}
+
+/* ==========================================================
+   Lead Text
+========================================================== */
+
+.lead {
+
+    font-size: var(--fs-body-lg);
+
+    color: var(--color-text);
+
+    line-height: 1.8;
+
+    max-width: 42rem;
+
+}
+
+/* ==========================================================
+   Small Label
+========================================================== */
+
+.label {
+
+    display: inline-block;
+
+    margin-bottom: var(--space-16);
+
+    color: var(--color-accent);
+
+    text-transform: uppercase;
+
+    letter-spacing: .25em;
+
+    font-size: var(--fs-caption);
+
+    font-weight: 600;
+
+}
+
+/* ==========================================================
+   Utility Text
+========================================================== */
+
+.text-muted {
+
+    color: var(--color-text-muted);
+
+}
+
+.text-accent {
+
+    color: var(--color-accent);
+
+}
+
+.text-center {
+
+    text-align: center;
+
+}
