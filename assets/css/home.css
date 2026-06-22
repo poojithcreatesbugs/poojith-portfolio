@@ -1,24 +1,530 @@
 /* ==========================================================
-   POOJITH PORTFOLIO
-   File: home.css
+   POOJITH PORTFOLIO V2
+   Home Page
 ========================================================== */
 
-.hero {
+/* ==========================
+   HERO
+========================== */
 
-    min-height: 100vh;
+.hero{
 
-    display: flex;
+    position:relative;
 
-    align-items: center;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background:var(--color-background);
 
 }
 
-.hero .container {
+/* ==========================
+   BACKGROUND GLOW
+========================== */
 
-    display: flex;
+.hero::before{
 
-    flex-direction: column;
+    content:"";
 
-    gap: var(--space-32);
+    position:absolute;
+
+    width:900px;
+
+    height:900px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        rgba(200,169,106,.16) 0%,
+        rgba(200,169,106,.08) 30%,
+        transparent 70%);
+
+    top:-350px;
+
+    right:-250px;
+
+    filter:blur(100px);
+
+    animation:floatGlow 12s ease-in-out infinite;
+
+}
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+        rgba(255,255,255,.03),
+        transparent 70%);
+
+    left:-250px;
+
+    bottom:-250px;
+
+    filter:blur(120px);
+
+}
+
+/* ==========================
+   HERO CONTENT
+========================== */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    justify-content:center;
+
+    gap:2rem;
+
+    min-height:100vh;
+
+}
+
+/* ==========================
+   HERO TITLE
+========================== */
+
+.hero h1{
+
+    font-size:clamp(5rem,11vw,10rem);
+
+    line-height:.86;
+
+    letter-spacing:-0.06em;
+
+    text-transform:uppercase;
+
+    margin-top:1rem;
+
+}
+
+/* ==========================
+   DESCRIPTION
+========================== */
+
+.hero-description{
+
+    max-width:620px;
+
+    font-size:1.25rem;
+
+    line-height:1.9;
+
+    color:var(--color-text-secondary);
+
+}
+
+/* ==========================
+   TAGS
+========================== */
+
+.hero-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:1rem;
+
+}
+
+.hero-tags span{
+
+    padding:.85rem 1.4rem;
+
+    border-radius:999px;
+
+    border:1px solid var(--color-border);
+
+    background:rgba(255,255,255,.03);
+
+    color:var(--color-text-secondary);
+
+    transition:.35s ease;
+
+}
+
+.hero-tags span:hover{
+
+    border-color:var(--color-accent);
+
+    color:var(--color-text);
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.primary-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:1rem 2rem;
+
+    margin-top:1rem;
+
+    border-radius:999px;
+
+    background:var(--color-accent);
+
+    color:#111;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 40px rgba(200,169,106,.25);
+
+}
+
+/* ==========================
+   SCROLL INDICATOR
+========================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:40px;
+
+    transform:translateX(-50%);
+
+    color:var(--color-text-muted);
+
+    font-size:.9rem;
+
+    letter-spacing:.3em;
+
+    text-transform:uppercase;
+
+    animation:bounce 2.5s infinite;
+
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+
+@keyframes floatGlow{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(40px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+
+        transform:translate(-50%,0);
+
+    }
+
+    50%{
+
+        transform:translate(-50%,-10px);
+
+    }
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:1024px){
+
+    .hero-content{
+
+        text-align:center;
+
+        align-items:center;
+
+    }
+
+    .hero-description{
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero{
+
+        padding:6rem 0;
+
+    }
+
+    .hero h1{
+
+        font-size:clamp(3.8rem,18vw,6rem);
+
+        line-height:.95;
+
+    }
+
+    .hero-description{
+
+        font-size:1.05rem;
+
+    }
+
+    .hero-tags{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .hero-tags{
+
+        gap:.75rem;
+
+    }
+
+    .hero-tags span{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+/* ==========================================================
+   MOUSE SPOTLIGHT
+========================================================== */
+
+.mouse-spotlight{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:650px;
+
+    height:650px;
+
+    pointer-events:none;
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(circle,
+        rgba(200,169,106,.12) 0%,
+        rgba(200,169,106,.06) 25%,
+        rgba(255,255,255,.02) 50%,
+        transparent 72%);
+
+    filter:blur(40px);
+
+    z-index:0;
+
+    transition:opacity .4s ease;
+
+    mix-blend-mode:screen;
+
+}
+
+.hero,
+.content-section,
+footer{
+
+    position:relative;
+
+    z-index:1;
+
+}
+/* ==========================================================
+   PAGE LOADER
+========================================================== */
+
+.page-loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050505;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:99999;
+
+    transition:
+        opacity .9s ease,
+        visibility .9s ease;
+
+}
+
+.loader-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:2rem;
+
+}
+
+.loader-logo{
+
+    font-family:var(--font-heading);
+
+    font-size:4rem;
+
+    color:var(--color-text);
+
+    letter-spacing:.15em;
+
+    animation:pulseLogo 1.8s ease infinite;
+
+}
+
+.loader-line{
+
+    width:180px;
+
+    height:2px;
+
+    background:rgba(255,255,255,.08);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.loader-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-40%;
+
+    top:0;
+
+    width:40%;
+
+    height:100%;
+
+    background:var(--color-accent);
+
+    animation:loaderMove 1.4s linear infinite;
+
+}
+
+.loader-hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+@keyframes loaderMove{
+
+    from{
+
+        left:-40%;
+
+    }
+
+    to{
+
+        left:120%;
+
+    }
+
+}
+
+@keyframes pulseLogo{
+
+    0%,100%{
+
+        opacity:.65;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.04);
+
+    }
 
 }

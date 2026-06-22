@@ -1,78 +1,258 @@
 /* ==========================================================
-   POOJITH PORTFOLIO
+   POOJITH PORTFOLIO V2
    File: typography.css
+   Editorial Typography System
+========================================================== */
+
+/* ==========================================================
+   BODY
 ========================================================== */
 
 body{
 
-    font-size:var(--body);
+    font-family:var(--font-body);
+
+    font-size:var(--fs-body);
+
+    color:var(--color-text);
 
 }
 
-h1,h2,h3,h4,h5,h6{
+/* ==========================================================
+   HEADINGS
+========================================================== */
 
-    font-family:var(--font-display);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--font-heading);
 
     font-weight:500;
 
-    line-height:.95;
+    color:var(--color-text);
 
-    letter-spacing:-.03em;
+    line-height:.92;
+
+    letter-spacing:-0.04em;
 
 }
 
+h1{
+
+    font-size:var(--fs-hero);
+
+}
+
+h2{
+
+    font-size:var(--fs-h1);
+
+}
+
+h3{
+
+    font-size:var(--fs-h2);
+
+}
+
+h4{
+
+    font-size:var(--fs-h3);
+
+}
+
+h5{
+
+    font-size:var(--fs-h4);
+
+}
+
+h6{
+
+    font-size:1.2rem;
+
+}
+
+/* ==========================================================
+   PARAGRAPHS
+========================================================== */
+
+p{
+
+    max-width:65ch;
+
+    color:var(--color-text-secondary);
+
+    line-height:1.85;
+
+    font-size:var(--fs-body);
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    transition:var(--transition-medium);
+
+}
+
+a:hover{
+
+    color:var(--color-accent);
+
+}
+
+/* ==========================================================
+   DISPLAY TITLE
+========================================================== */
+
 .display-title{
 
-    font-size:var(--hero);
+    font-family:var(--font-heading);
+
+    font-size:clamp(5rem,11vw,10rem);
+
+    line-height:.84;
+
+    letter-spacing:-.05em;
 
     text-transform:uppercase;
 
 }
 
-.section-title{
+/* ==========================================================
+   SECTION TITLES
+========================================================== */
 
-    font-size:var(--h1);
+.section-title{
 
     margin-bottom:var(--space-32);
 
 }
 
-.lead{
+.section-heading{
 
-    font-size:var(--body-large);
+    display:flex;
 
-    color:var(--text);
+    flex-direction:column;
 
-    max-width:42rem;
+    gap:var(--space-16);
 
-}
-
-p{
-
-    color:var(--text-light);
-
-    max-width:65ch;
+    margin-bottom:var(--space-64);
 
 }
 
-.label{
+/* ==========================================================
+   EYEBROW
+========================================================== */
 
-    display:inline-block;
+.eyebrow{
 
-    margin-bottom:var(--space-16);
+    display:inline-flex;
 
-    color:var(--accent);
+    align-items:center;
+
+    gap:.6rem;
+
+    font-size:var(--fs-caption);
+
+    font-weight:600;
+
+    letter-spacing:.35em;
 
     text-transform:uppercase;
 
-    letter-spacing:.25em;
-
-    font-size:var(--caption);
+    color:var(--color-accent);
 
 }
 
+.eyebrow::before{
+
+    content:"";
+
+    width:32px;
+
+    height:1px;
+
+    background:var(--color-accent);
+
+}
+
+/* ==========================================================
+   LEAD TEXT
+========================================================== */
+
+.lead{
+
+    font-size:var(--fs-body-lg);
+
+    color:var(--color-text);
+
+    max-width:720px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   MUTED
+========================================================== */
+
 .text-muted{
 
-    color:var(--text-muted);
+    color:var(--color-text-muted);
+
+}
+
+/* ==========================================================
+   ACCENT
+========================================================== */
+
+.text-accent{
+
+    color:var(--color-accent);
+
+}
+
+/* ==========================================================
+   ALIGNMENT
+========================================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+    h1{
+
+        line-height:.95;
+
+    }
+
+    .display-title{
+
+        font-size:clamp(3.8rem,14vw,6rem);
+
+    }
+
+    .lead{
+
+        font-size:1.1rem;
+
+    }
 
 }

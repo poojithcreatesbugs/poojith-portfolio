@@ -1,6 +1,11 @@
 /* ==========================================================
-   POOJITH PORTFOLIO
+   POOJITH PORTFOLIO V2
    File: reset.css
+   Global Reset & Base Styles
+========================================================== */
+
+/* ==========================================================
+   RESET
 ========================================================== */
 
 *,
@@ -11,37 +16,66 @@
     box-sizing:border-box;
 }
 
+/* ==========================================================
+   ROOT
+========================================================== */
+
 html{
+
     scroll-behavior:smooth;
+
+    font-size:16px;
+
+    -webkit-text-size-adjust:100%;
+
 }
+
+/* ==========================================================
+   BODY
+========================================================== */
 
 body{
 
-    background:var(--background);
+    background:var(--color-background);
 
-    color:var(--text);
+    color:var(--color-text);
 
     font-family:var(--font-body);
+
+    font-size:var(--fs-body);
 
     line-height:1.7;
 
     overflow-x:hidden;
 
-    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
 
     text-rendering:optimizeLegibility;
 
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
 }
 
-img{
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+img,
+picture{
 
     display:block;
 
-    width:100%;
+    max-width:100%;
 
     height:auto;
 
 }
+
+/* ==========================================================
+   LINKS
+========================================================== */
 
 a{
 
@@ -51,61 +85,152 @@ a{
 
 }
 
-button{
+/* ==========================================================
+   LISTS
+========================================================== */
 
-    border:none;
-
-    background:none;
-
-    cursor:pointer;
-
-    font:inherit;
-
-}
-
-input,
-textarea{
-
-    border:none;
-
-    outline:none;
-
-    background:none;
-
-    color:inherit;
-
-    font:inherit;
-
-}
-
-ul{
+ul,
+ol{
 
     list-style:none;
 
 }
 
-::selection{
+/* ==========================================================
+   BUTTONS
+========================================================== */
 
-    background:var(--accent);
+button{
 
-    color:var(--background);
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font:inherit;
+
+    color:inherit;
 
 }
 
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+input,
+textarea,
+select{
+
+    font:inherit;
+
+    color:inherit;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+}
+
+/* ==========================================================
+   TABLES
+========================================================== */
+
+table{
+
+    border-collapse:collapse;
+
+    border-spacing:0;
+
+}
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+section{
+
+    position:relative;
+
+}
+
+/* ==========================================================
+   SVG
+========================================================== */
+
+svg{
+
+    display:block;
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:var(--color-accent);
+
+    color:#000;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
 ::-webkit-scrollbar{
 
-    width:8px;
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:var(--color-background);
 
 }
 
 ::-webkit-scrollbar-thumb{
 
-    background:#333;
+    background:#2b2b2b;
+
+    border-radius:999px;
 
 }
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:var(--accent);
+    background:var(--color-accent);
+
+}
+
+/* ==========================================================
+   FOCUS STATES
+========================================================== */
+
+:focus-visible{
+
+    outline:2px solid var(--color-accent);
+
+    outline-offset:4px;
+
+}
+
+/* ==========================================================
+   MEDIA
+========================================================== */
+
+video,
+canvas{
+
+    display:block;
+
+    max-width:100%;
 
 }

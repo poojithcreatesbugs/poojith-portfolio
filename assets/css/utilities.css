@@ -1,93 +1,343 @@
 /* ==========================================================
-   POOJITH PORTFOLIO
+   POOJITH PORTFOLIO V2
    File: utilities.css
-   Version: 1.0
+   Layout & Utility System
 ========================================================== */
 
-/* ===========================
+/* ==========================================================
    CONTAINERS
-=========================== */
+========================================================== */
 
-.container {
-    width: min(92%, var(--container));
-    margin-inline: auto;
+.container{
+
+    width:min(92%, var(--container-width));
+
+    margin-inline:auto;
+
 }
 
-.container-small {
-    width: min(90%, var(--container-small));
-    margin-inline: auto;
+.container-small{
+
+    width:min(90%, var(--container-small));
+
+    margin-inline:auto;
+
 }
 
-/* ===========================
+/* ==========================================================
+   SECTION SPACING
+========================================================== */
+
+.section{
+
+    padding:var(--space-128) 0;
+
+}
+
+.section-large{
+
+    padding:var(--space-160) 0;
+
+}
+
+.section-small{
+
+    padding:var(--space-80) 0;
+
+}
+
+/* ==========================================================
    DISPLAY
-=========================== */
+========================================================== */
 
-.flex {
-    display: flex;
+.flex{
+
+    display:flex;
+
 }
 
-.grid {
-    display: grid;
+.grid{
+
+    display:grid;
+
 }
 
-.hidden {
-    display: none !important;
+.block{
+
+    display:block;
+
 }
 
-/* ===========================
-   ALIGNMENT
-=========================== */
+.inline-flex{
 
-.items-center {
-    align-items: center;
+    display:inline-flex;
+
 }
 
-.justify-center {
-    justify-content: center;
+/* ==========================================================
+   FLEX HELPERS
+========================================================== */
+
+.items-center{
+
+    align-items:center;
+
 }
 
-.justify-between {
-    justify-content: space-between;
+.items-start{
+
+    align-items:flex-start;
+
 }
 
-.text-center {
-    text-align: center;
+.items-end{
+
+    align-items:flex-end;
+
 }
 
-/* ===========================
-   SPACING
-=========================== */
+.justify-center{
 
-.mt-16 { margin-top: var(--space-16); }
-.mt-32 { margin-top: var(--space-32); }
-.mt-64 { margin-top: var(--space-64); }
-.mt-96 { margin-top: var(--space-96); }
+    justify-content:center;
 
-.mb-16 { margin-bottom: var(--space-16); }
-.mb-32 { margin-bottom: var(--space-32); }
-.mb-64 { margin-bottom: var(--space-64); }
-.mb-96 { margin-bottom: var(--space-96); }
-
-.py-section {
-    padding-block: var(--space-128);
 }
 
-/* ===========================
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.justify-end{
+
+    justify-content:flex-end;
+
+}
+
+.flex-column{
+
+    flex-direction:column;
+
+}
+
+.flex-wrap{
+
+    flex-wrap:wrap;
+
+}
+
+.gap-8{
+
+    gap:var(--space-8);
+
+}
+
+.gap-16{
+
+    gap:var(--space-16);
+
+}
+
+.gap-24{
+
+    gap:var(--space-24);
+
+}
+
+.gap-32{
+
+    gap:var(--space-32);
+
+}
+
+.gap-48{
+
+    gap:var(--space-48);
+
+}
+
+.gap-64{
+
+    gap:var(--space-64);
+
+}
+
+/* ==========================================================
+   GRID HELPERS
+========================================================== */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:var(--space-64);
+
+}
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:var(--space-40);
+
+}
+
+.grid-auto{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:var(--space-40);
+
+}
+
+/* ==========================================================
    WIDTH
-=========================== */
+========================================================== */
 
-.w-full {
-    width: 100%;
+.w-full{
+
+    width:100%;
+
 }
 
-/* ===========================
+.max-720{
+
+    max-width:720px;
+
+}
+
+.max-960{
+
+    max-width:960px;
+
+}
+
+.max-1200{
+
+    max-width:1200px;
+
+}
+
+/* ==========================================================
+   MARGIN
+========================================================== */
+
+.mt-16{margin-top:var(--space-16);}
+.mt-24{margin-top:var(--space-24);}
+.mt-32{margin-top:var(--space-32);}
+.mt-48{margin-top:var(--space-48);}
+.mt-64{margin-top:var(--space-64);}
+.mt-96{margin-top:var(--space-96);}
+
+.mb-16{margin-bottom:var(--space-16);}
+.mb-24{margin-bottom:var(--space-24);}
+.mb-32{margin-bottom:var(--space-32);}
+.mb-48{margin-bottom:var(--space-48);}
+.mb-64{margin-bottom:var(--space-64);}
+.mb-96{margin-bottom:var(--space-96);}
+
+/* ==========================================================
+   TEXT
+========================================================== */
+
+.text-left{
+
+    text-align:left;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.text-right{
+
+    text-align:right;
+
+}
+
+/* ==========================================================
    POSITION
-=========================== */
+========================================================== */
 
-.relative {
-    position: relative;
+.relative{
+
+    position:relative;
+
 }
 
-.absolute {
-    position: absolute;
+.absolute{
+
+    position:absolute;
+
+}
+
+.fixed{
+
+    position:fixed;
+
+}
+
+/* ==========================================================
+   OVERFLOW
+========================================================== */
+
+.overflow-hidden{
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================
+   VISIBILITY
+========================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1024px){
+
+    .grid-2{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .grid-3{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .section{
+
+        padding:var(--space-96) 0;
+
+    }
+
+    .section-large{
+
+        padding:var(--space-128) 0;
+
+    }
+
 }

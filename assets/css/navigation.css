@@ -1,6 +1,306 @@
 /* ==========================================================
-   POOJITH PORTFOLIO
+   POOJITH PORTFOLIO V2
    File: navigation.css
+   Premium Floating Navigation
 ========================================================== */
 
-/* Navigation will be built in Phase 1D */
+/* ==========================================================
+   NAVIGATION
+========================================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:24px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:min(94%,1200px);
+
+    z-index:var(--z-navigation);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    background:rgba(15,15,15,.55);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:999px;
+
+    transition:all .45s cubic-bezier(.16,1,.3,1);
+
+}
+
+.navbar.scrolled{
+
+    top:16px;
+
+    background:rgba(10,10,10,.82);
+
+    border-color:rgba(255,255,255,.12);
+
+    box-shadow:0 12px 40px rgba(0,0,0,.28);
+
+}
+
+/* ==========================================================
+   CONTAINER
+========================================================== */
+
+.nav-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    height:74px;
+
+    padding:0 2rem;
+
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo{
+
+    font-family:var(--font-heading);
+
+    font-size:1.75rem;
+
+    letter-spacing:.08em;
+
+    font-weight:600;
+
+    color:var(--color-text);
+
+    transition:var(--transition-medium);
+
+}
+
+.logo:hover{
+
+    color:var(--color-accent);
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:2.75rem;
+
+}
+
+.nav-links li{
+
+    list-style:none;
+
+}
+
+.nav-links a{
+
+    position:relative;
+
+    font-size:.94rem;
+
+    font-weight:500;
+
+    color:var(--color-text-secondary);
+
+    transition:var(--transition-medium);
+
+}
+
+/* underline animation */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:1px;
+
+    background:var(--color-accent);
+
+    transition:width .35s ease;
+
+}
+
+.nav-links a:hover{
+
+    color:var(--color-text);
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
+
+/* ==========================================================
+   MOBILE MENU BUTTON
+========================================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+.menu-toggle span{
+
+    width:26px;
+
+    height:2px;
+
+    background:var(--color-text);
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:900px){
+
+    .navbar{
+
+        width:92%;
+
+    }
+
+    .menu-toggle{
+
+        display:flex;
+
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:90px;
+
+        left:0;
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:2rem;
+
+        padding:2.5rem 0;
+
+        border-radius:28px;
+
+        background:rgba(12,12,12,.96);
+
+        backdrop-filter:blur(24px);
+
+        -webkit-backdrop-filter:blur(24px);
+
+        border:1px solid rgba(255,255,255,.08);
+
+        opacity:0;
+
+        pointer-events:none;
+
+        transform:translateY(-20px);
+
+        transition:all .4s cubic-bezier(.16,1,.3,1);
+
+    }
+
+    .nav-links.active{
+
+        opacity:1;
+
+        pointer-events:auto;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .nav-container{
+
+        padding:0 1.4rem;
+
+    }
+
+    .logo{
+
+        font-size:1.55rem;
+
+    }
+
+}
+/* ==========================================================
+   SCROLL PROGRESS
+========================================================== */
+
+.scroll-progress{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        var(--color-accent),
+        #ffffff
+    );
+
+    z-index:9999;
+
+    transition:width .08s linear;
+
+}
