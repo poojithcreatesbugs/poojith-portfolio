@@ -1,151 +1,76 @@
 /* ==========================================================
-   POOJITH PORTFOLIO V2
-   Design Tokens
-   Version 1.0
+   POOJITH PORTFOLIO
+   File: variables.css
+   Version: 2.0
 ========================================================== */
 
-:root {
+:root{
 
-    /* ======================================================
-       COLORS
-    ====================================================== */
+    /* ================= COLORS ================= */
 
-    --color-background: #080808;
-    --color-surface: #111111;
-    --color-surface-light: #181818;
+    --background:#080808;
+    --surface:#111111;
+    --surface-light:#1A1A1A;
 
-    --color-text: #F5F5F5;
-    --color-text-secondary: #B8B8B8;
-    --color-text-muted: #777777;
+    --text:#F5F5F5;
+    --text-light:#B8B8B8;
+    --text-muted:#7C7C7C;
 
-    --color-accent: #C7A56A;
-    --color-accent-light: rgba(199,165,106,.15);
+    --accent:#C8A96A;
+    --accent-light:rgba(200,169,106,.15);
 
-    --color-border: rgba(255,255,255,.08);
+    --border:rgba(255,255,255,.08);
 
-    --color-success: #53B483;
-    --color-warning: #E7C56C;
-    --color-danger: #D96C6C;
+    --success:#52B788;
+    --danger:#E76F51;
 
+    /* ================= TYPOGRAPHY ================= */
 
-    /* ======================================================
-       TYPOGRAPHY
-    ====================================================== */
+    --font-display:"Cormorant Garamond",serif;
+    --font-body:"Inter",sans-serif;
 
-    --font-display: "Cormorant Garamond", serif;
-    --font-body: "Inter", sans-serif;
+    --hero:clamp(5rem,11vw,9rem);
 
+    --h1:clamp(3.5rem,7vw,5rem);
+    --h2:clamp(2.8rem,5vw,4rem);
+    --h3:clamp(2rem,4vw,2.8rem);
 
-    /* Hero */
+    --body:1.05rem;
+    --body-large:1.25rem;
+    --small:.9rem;
+    --caption:.8rem;
 
-    --fs-hero: clamp(5rem, 12vw, 10rem);
+    /* ================= SPACING ================= */
 
-    /* Headings */
+    --space-8:.5rem;
+    --space-16:1rem;
+    --space-24:1.5rem;
+    --space-32:2rem;
+    --space-48:3rem;
+    --space-64:4rem;
+    --space-96:6rem;
+    --space-128:8rem;
+    --space-160:10rem;
 
-    --fs-h1: clamp(3rem,6vw,4.5rem);
-    --fs-h2: clamp(2.5rem,5vw,3.5rem);
-    --fs-h3: clamp(1.8rem,3vw,2.4rem);
+    /* ================= CONTAINER ================= */
 
-    /* Body */
+    --container:1280px;
+    --container-small:960px;
 
-    --fs-body-lg:1.25rem;
-    --fs-body:1.05rem;
-    --fs-small:.9rem;
-    --fs-caption:.75rem;
+    /* ================= RADIUS ================= */
 
-    /* Font Weight */
-
-    --fw-light:300;
-    --fw-regular:400;
-    --fw-medium:500;
-    --fw-semibold:600;
-    --fw-bold:700;
-
-
-    /* ======================================================
-       SPACING
-    ====================================================== */
-
-    --space-2:2px;
-    --space-4:4px;
-    --space-8:8px;
-    --space-12:12px;
-    --space-16:16px;
-    --space-24:24px;
-    --space-32:32px;
-    --space-40:40px;
-    --space-48:48px;
-    --space-64:64px;
-    --space-80:80px;
-    --space-96:96px;
-    --space-120:120px;
-    --space-160:160px;
-
-
-    /* ======================================================
-       CONTAINER
-    ====================================================== */
-
-    --container-width:1280px;
-    --container-wide:1500px;
-    --container-narrow:900px;
-
-
-    /* ======================================================
-       BORDER RADIUS
-    ====================================================== */
-
-    --radius-none:0;
-    --radius-small:4px;
-    --radius-medium:8px;
-    --radius-large:16px;
+    --radius-sm:6px;
+    --radius-md:12px;
+    --radius-lg:20px;
     --radius-pill:999px;
 
+    /* ================= SHADOW ================= */
 
-    /* ======================================================
-       SHADOWS
-    ====================================================== */
+    --shadow:
+        0 20px 60px rgba(0,0,0,.25);
 
-    --shadow-soft:
-        0 8px 40px rgba(0,0,0,.18);
+    /* ================= TRANSITION ================= */
 
-    --shadow-medium:
-        0 12px 60px rgba(0,0,0,.30);
-
-    --shadow-large:
-        0 20px 90px rgba(0,0,0,.40);
-
-
-    /* ======================================================
-       TRANSITIONS
-    ====================================================== */
-
-    --transition-fast:.25s ease;
-
-    --transition-medium:
-        .45s cubic-bezier(.16,1,.3,1);
-
-    --transition-slow:
-        .8s cubic-bezier(.16,1,.3,1);
-
-
-    /* ======================================================
-       Z INDEX
-    ====================================================== */
-
-    --z-loader:9999;
-    --z-navbar:900;
-    --z-modal:800;
-    --z-overlay:700;
-    --z-dropdown:600;
-    --z-content:1;
-
-
-    /* ======================================================
-       SECTION SPACING
-    ====================================================== */
-
-    --section-padding:
-        clamp(5rem,10vw,10rem);
+    --transition:.45s cubic-bezier(.16,1,.3,1);
 
 }
