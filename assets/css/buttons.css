@@ -1,0 +1,58 @@
+/* ==========================================================
+   POOJITH PORTFOLIO
+   File: buttons.css
+========================================================== */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .75rem;
+
+    padding: 1rem 2rem;
+
+    border-radius: var(--radius-pill);
+
+    transition: var(--transition);
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+}
+
+.btn-primary {
+
+    background: var(--accent);
+
+    color: var(--background);
+
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
+
+}
+
+.btn-outline {
+
+    border: 1px solid var(--border);
+
+    color: var(--text);
+
+}
+
+.btn-outline:hover {
+
+    border-color: var(--accent);
+
+    color: var(--accent);
+
+}

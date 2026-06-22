@@ -3,13 +3,51 @@
    File: animations.css
 ========================================================== */
 
+/* ===========================
+   FADE UP
+=========================== */
+
 @keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ===========================
+   FADE
+=========================== */
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+/* ===========================
+   SCALE
+=========================== */
+
+@keyframes scaleIn {
 
     from {
 
         opacity: 0;
 
-        transform: translateY(40px);
+        transform: scale(.96);
 
     }
 
@@ -17,8 +55,30 @@
 
         opacity: 1;
 
-        transform: translateY(0);
+        transform: scale(1);
 
     }
+
+}
+
+/* ===========================
+   CLASSES
+=========================== */
+
+.fade-up {
+
+    animation: fadeUp .9s var(--transition) both;
+
+}
+
+.fade {
+
+    animation: fade .8s ease both;
+
+}
+
+.scale {
+
+    animation: scaleIn .8s var(--transition) both;
 
 }

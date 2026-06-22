@@ -1,0 +1,93 @@
+/* ==========================================================
+   POOJITH PORTFOLIO
+   File: utilities.css
+   Version: 1.0
+========================================================== */
+
+/* ===========================
+   CONTAINERS
+=========================== */
+
+.container {
+    width: min(92%, var(--container));
+    margin-inline: auto;
+}
+
+.container-small {
+    width: min(90%, var(--container-small));
+    margin-inline: auto;
+}
+
+/* ===========================
+   DISPLAY
+=========================== */
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===========================
+   ALIGNMENT
+=========================== */
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ===========================
+   SPACING
+=========================== */
+
+.mt-16 { margin-top: var(--space-16); }
+.mt-32 { margin-top: var(--space-32); }
+.mt-64 { margin-top: var(--space-64); }
+.mt-96 { margin-top: var(--space-96); }
+
+.mb-16 { margin-bottom: var(--space-16); }
+.mb-32 { margin-bottom: var(--space-32); }
+.mb-64 { margin-bottom: var(--space-64); }
+.mb-96 { margin-bottom: var(--space-96); }
+
+.py-section {
+    padding-block: var(--space-128);
+}
+
+/* ===========================
+   WIDTH
+=========================== */
+
+.w-full {
+    width: 100%;
+}
+
+/* ===========================
+   POSITION
+=========================== */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
