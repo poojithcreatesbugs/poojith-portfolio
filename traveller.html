@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Traveller — Poojith Pinnamaraju</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/navigation.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/cards.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/gallery.css">
+<link rel="stylesheet" href="assets/css/professional.css">
+<style>
+.cursor-dot{position:fixed;z-index:9999;width:8px;height:8px;border-radius:50%;background:var(--color-text);transform:translate(-50%,-50%);pointer-events:none;mix-blend-mode:difference;transition:width .2s,height .2s}
+.cursor-ring{position:fixed;z-index:9998;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,245,245,.28);transform:translate(-50%,-50%);pointer-events:none;transition:width .3s cubic-bezier(.25,1,.5,1),height .3s cubic-bezier(.25,1,.5,1)}
+.cursor-dot.h{width:16px;height:16px}.cursor-ring.h{width:58px;height:58px;border-color:var(--color-accent)}
+/* INFO STRIP */
+.info-strip{padding:1.25rem 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.info-strip-inner{display:flex;align-items:center;gap:1rem;font-size:.82rem;color:var(--color-text-muted)}
+.info-strip a{color:var(--color-accent);text-decoration:underline;text-underline-offset:3px}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cd"></div><div class="cursor-ring" id="cr"></div>
+<div class="page-overlay" id="page-overlay"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div style="display:flex;align-items:center;gap:1.5rem">
+      <a href="index.html" onclick="goTo(event,'index.html')" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-muted);text-decoration:none" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">← Universe</a>
+      <div style="width:1px;height:14px;background:var(--color-border)"></div>
+      <span style="font-family:var(--font-heading);font-size:1rem;color:var(--color-text)">Traveller</span>
+    </div>
+    <a href="https://www.instagram.com/__poojithhh__/" target="_blank" style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);text-decoration:none" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Instagram ↗</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="section-large" style="min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:5rem;position:relative;overflow:hidden">
+  <div class="page-hero-bg-word">Motion</div>
+  <div class="container">
+    <div class="reveal"><p class="page-hero-eyebrow">Traveller · Explorer · Collector of Stories</p>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(3.5rem,8vw,7.5rem);font-weight:400;line-height:.93;letter-spacing:-.03em;color:var(--color-text)">Always in <em style="font-style:italic;color:var(--color-accent)">Motion</em></h1></div>
+    <p class="reveal page-hero-sub" style="animation-delay:.12s">New York · Washington DC · North Carolina · Nepal · Rishikesh · Auli · Badrinath · Mumbai · Delhi · Hyderabad · Bhubaneswar · Puri</p>
+    <div class="reveal" style="animation-delay:.2s;margin-top:2rem">
+      <a href="https://www.instagram.com/__poojithhh__/" target="_blank" class="btn btn-secondary">Follow the Journey on Instagram ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="container">
+    <div class="info-strip-inner">
+      📸 <span>Add your travel photos by replacing each placeholder — drop an <code style="background:rgba(255,255,255,.06);padding:1px 6px">&lt;img&gt;</code> inside each <code style="background:rgba(255,255,255,.06);padding:1px 6px">.dest-card</code>. See HTML comments. Follow <a href="https://www.instagram.com/__poojithhh__/" target="_blank">@__poojithhh__</a> for the live journey.</span>
+    </div>
+  </div>
+</div>
+
+<!-- DESTINATION GRID -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">Gallery</p><h2>Frames from the <em style="font-style:italic;color:var(--color-accent)">Road</em></h2></div>
+    <div class="dest-grid">
+
+      <!-- NEW YORK — hero -->
+      <div class="dest-card dg-hero show-cap">
+        <!--PHOTO: replace below with <img class="dest-img" src="assets/images/shared/newyork.jpg" alt="New York">-->
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#0D1A2E,#040810)"></div><div class="dest-placeholder-emoji">🗽</div></div>
+        <div class="dest-caption"><div class="dest-region">🇺🇸 USA</div><div class="dest-name">New York City</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- WASHINGTON DC -->
+      <div class="dest-card dg-wide">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#1A1A2E,#080810)"></div><div class="dest-placeholder-emoji">🏛️</div></div>
+        <div class="dest-caption"><div class="dest-region">🇺🇸 USA</div><div class="dest-name">Washington DC</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- NORTH CAROLINA -->
+      <div class="dest-card dg-sq">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#0A1A0A,#040A04)"></div><div class="dest-placeholder-emoji">🌲</div></div>
+        <div class="dest-caption"><div class="dest-region">🇺🇸 USA</div><div class="dest-name">North Carolina</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- NEPAL -->
+      <div class="dest-card dg-tall show-cap">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#0A1A0E,#040A06)"></div><div class="dest-placeholder-emoji">🏔️</div></div>
+        <div class="dest-caption"><div class="dest-region">🇳🇵 Nepal</div><div class="dest-name">Nepal</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- AULI -->
+      <div class="dest-card dg-med">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#0E1A1A,#060A0A)"></div><div class="dest-placeholder-emoji">❄️</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 Uttarakhand</div><div class="dest-name">Auli</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- BADRINATH -->
+      <div class="dest-card dg-sq">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#1A140A,#0A0804)"></div><div class="dest-placeholder-emoji">🛕</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 Uttarakhand</div><div class="dest-name">Badrinath</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- RISHIKESH -->
+      <div class="dest-card dg-land show-cap">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#0A1818,#040C0C)"></div><div class="dest-placeholder-emoji">🌊</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 Uttarakhand</div><div class="dest-name">Rishikesh</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- MUMBAI -->
+      <div class="dest-card dg-wide show-cap">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#1A0E0A,#0A0604)"></div><div class="dest-placeholder-emoji">🌇</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 India</div><div class="dest-name">Mumbai</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- DELHI -->
+      <div class="dest-card dg-sq">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#160E1A,#0A060E)"></div><div class="dest-placeholder-emoji">🏰</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 India</div><div class="dest-name">Delhi</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- HYDERABAD -->
+      <div class="dest-card dg-med">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#1A1208,#0A0A04)"></div><div class="dest-placeholder-emoji">🕌</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 Telangana</div><div class="dest-name">Hyderabad</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- BHUBANESWAR -->
+      <div class="dest-card dg-sq">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#180E0A,#0C0604)"></div><div class="dest-placeholder-emoji">⛩️</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 Odisha</div><div class="dest-name">Bhubaneswar</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+      <!-- PURI -->
+      <div class="dest-card dg-land show-cap">
+        <div class="dest-placeholder"><div class="dest-placeholder-bg" style="background:linear-gradient(135deg,#0A1818,#040C08)"></div><div class="dest-placeholder-emoji">🌊</div></div>
+        <div class="dest-caption"><div class="dest-region">🇮🇳 Odisha</div><div class="dest-name">Puri</div><div class="dest-add">Add your photo here</div></div>
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-band" style="margin-top:3rem">
+      <div class="stat-box reveal"><div class="stat-n">12<em>+</em></div><div class="stat-l">Destinations</div></div>
+      <div class="stat-box reveal"><div class="stat-n">2</div><div class="stat-l">Continents</div></div>
+      <div class="stat-box reveal"><div class="stat-n">∞</div><div class="stat-l">Stories Collected</div></div>
+      <div class="stat-box reveal"><div class="stat-n">1</div><div class="stat-l">Book Brewing</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLS -->
+<section style="padding:0 0 5rem;border-top:1px solid var(--color-border)">
+  <div class="container" style="padding-top:3rem">
+    <p class="eyebrow" style="margin-bottom:1.5rem">Places I've Been</p>
+    <div class="dest-pills">
+      <div class="dest-pill">🗽 New York</div>
+      <div class="dest-pill">🏛️ Washington DC</div>
+      <div class="dest-pill">🌲 North Carolina</div>
+      <div class="dest-pill">🏔️ Nepal</div>
+      <div class="dest-pill">❄️ Auli</div>
+      <div class="dest-pill">🛕 Badrinath</div>
+      <div class="dest-pill">🌊 Rishikesh</div>
+      <div class="dest-pill">🌇 Mumbai</div>
+      <div class="dest-pill">🏰 Delhi</div>
+      <div class="dest-pill">🕌 Hyderabad</div>
+      <div class="dest-pill">⛩️ Bhubaneswar</div>
+      <div class="dest-pill">🌊 Puri</div>
+      <div class="dest-pill" style="border-color:rgba(200,169,106,.25);color:var(--color-accent)">📍 Next: TBD</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<div class="travel-philosophy reveal">
+  <div class="container">
+    <p class="tphil-text">"Not all those who wander are lost — some are just collecting stories for the book they're writing."</p>
+    <p class="tphil-sub">From the Himalayas to Manhattan · Always moving · Always watching</p>
+  </div>
+</div>
+
+<footer><div class="container"><div class="footer-inner"><p style="color:var(--color-text-muted);font-size:.8rem;max-width:100%">© 2026 Poojith Pinnamaraju</p><div class="footer-links"><a href="index.html" onclick="goTo(event,'index.html')">← Universe</a><a href="https://www.instagram.com/__poojithhh__/" target="_blank">Instagram</a><a href="mailto:poojithpinnamaraju@gmail.com">Contact</a></div></div></div></footer>
+
+<script src="assets/js/loader.js"></script><script src="assets/js/cursor.js"></script><script src="assets/js/navigation.js"></script><script src="assets/js/reveal.js"></script><script src="assets/js/transitions.js"></script><script src="assets/js/main.js"></script>
+<script>
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');let mx=0,my=0,rx=0,ry=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(a)})();
+document.querySelectorAll('a,.dest-card,.dest-pill').forEach(el=>{el.addEventListener('mouseenter',()=>{cd.classList.add('h');cr.classList.add('h')});el.addEventListener('mouseleave',()=>{cd.classList.remove('h');cr.classList.remove('h')})});
+function goTo(e,url){e.preventDefault();const ov=document.getElementById('page-overlay');if(ov){ov.style.transformOrigin='bottom';ov.style.transform='scaleY(1)';ov.style.transition='transform .5s cubic-bezier(.76,0,.24,1)';ov.style.pointerEvents='auto';}setTimeout(()=>window.location.href=url,510)}
+</script>
+</body>
+</html>

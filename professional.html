@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional — Poojith Pinnamaraju</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/navigation.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/cards.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/professional.css">
+<style>
+.cursor-dot{position:fixed;z-index:9999;width:8px;height:8px;border-radius:50%;background:var(--color-text);transform:translate(-50%,-50%);pointer-events:none;mix-blend-mode:difference;transition:width .2s,height .2s}
+.cursor-ring{position:fixed;z-index:9998;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,245,245,.28);transform:translate(-50%,-50%);pointer-events:none;transition:width .3s cubic-bezier(.25,1,.5,1),height .3s cubic-bezier(.25,1,.5,1)}
+.cursor-dot.h{width:16px;height:16px}.cursor-ring.h{width:58px;height:58px;border-color:var(--color-accent)}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cd"></div><div class="cursor-ring" id="cr"></div>
+<div class="page-overlay" id="page-overlay"></div>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div style="display:flex;align-items:center;gap:1.5rem">
+      <a href="index.html" onclick="goTo(event,'index.html')" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-muted);text-decoration:none;display:flex;align-items:center;gap:.5rem" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">← Universe</a>
+      <div style="width:1px;height:14px;background:var(--color-border)"></div>
+      <span style="font-family:var(--font-heading);font-size:1rem;color:var(--color-text)">Professional</span>
+    </div>
+    <a href="mailto:poojithpinnamaraju@gmail.com" style="font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted);text-decoration:none" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero section-large" style="min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:5rem;position:relative;overflow:hidden">
+  <div class="page-hero-bg-word">Work</div>
+  <div class="container">
+    <div class="reveal"><p class="page-hero-eyebrow">Professional · Career</p>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(3.5rem,8vw,7.5rem);font-weight:400;line-height:.93;letter-spacing:-.03em;color:var(--color-text)">Data &amp; <em style="font-style:italic;color:var(--color-accent)">Decisions</em></h1></div>
+    <p class="reveal page-hero-sub" style="animation-delay:.12s">From SQL pipelines to client deployments — at the intersection of technology and business outcomes, turning complexity into clarity.</p>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><b>—</b>SQL &amp; Excel Analytics</span><span class="ticker-item"><b>—</b>O2C Cycle Automation</span><span class="ticker-item"><b>—</b>HighRadius · Forward Deployment</span><span class="ticker-item"><b>—</b>Python Development</span><span class="ticker-item"><b>—</b>Client Implementation</span><span class="ticker-item"><b>—</b>Blockchain &amp; Web3</span><span class="ticker-item"><b>—</b>Data Transformation</span>
+    <span class="ticker-item"><b>—</b>SQL &amp; Excel Analytics</span><span class="ticker-item"><b>—</b>O2C Cycle Automation</span><span class="ticker-item"><b>—</b>HighRadius · Forward Deployment</span><span class="ticker-item"><b>—</b>Python Development</span><span class="ticker-item"><b>—</b>Client Implementation</span><span class="ticker-item"><b>—</b>Blockchain &amp; Web3</span><span class="ticker-item"><b>—</b>Data Transformation</span>
+  </div>
+</div>
+
+<!-- EXPERIENCE -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">Career</p><h2>Where I've <em style="font-style:italic;color:var(--color-accent)">Worked</em></h2></div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-year">Jul 2025 — Present<br><span style="display:inline-block;margin-top:.5rem;padding:.25rem .8rem;border:1px solid rgba(200,169,106,.35);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent)">Current</span></div>
+        <div class="timeline-content">
+          <p class="eyebrow" style="margin-bottom:.5rem">HighRadius Technologies</p>
+          <h3 style="font-size:1.8rem;margin-bottom:.8rem">Forward Deployment Engineer – I</h3>
+          <p>Managing end-to-end project implementations, aligning functional requirements with client business objectives. Coordinating stakeholders and ensuring smooth transitions from development to live deployment.</p>
+          <div class="tag-row"><span class="tag">Client Deployment</span><span class="tag">Project Management</span><span class="tag">O2C</span><span class="tag">Stakeholder Coordination</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">Nov 2024 — Jul 2025</div>
+        <div class="timeline-content">
+          <p class="eyebrow" style="margin-bottom:.5rem">HighRadius Technologies</p>
+          <h3 style="font-size:1.8rem;margin-bottom:.8rem">Consulting Intern — Cash Application</h3>
+          <p>Worked in the Cash Application Module of the O2C cycle, using SQL and Excel to extract, analyze, and transform client data. One of the few multi-module trained members in the Mid-Market Consulting team.</p>
+          <div class="tag-row"><span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Data Transformation</span><span class="tag">Multi-module</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">Oct 2024 — Dec 2024</div>
+        <div class="timeline-content">
+          <p class="eyebrow" style="margin-bottom:.5rem">Quranium (Remote)</p>
+          <h3 style="font-size:1.8rem;margin-bottom:.8rem">Python Developer Intern</h3>
+          <p>Built and maintained Python-based applications focused on performance optimization and scalability. Integrated third-party APIs, wrote test suites, and collaborated with the dev team.</p>
+          <div class="tag-row"><span class="tag">Python</span><span class="tag">API Integration</span><span class="tag">Testing</span><span class="tag">Scalability</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">May 2024 — Jul 2024</div>
+        <div class="timeline-content">
+          <p class="eyebrow" style="margin-bottom:.5rem">HighRadius Technologies</p>
+          <h3 style="font-size:1.8rem;margin-bottom:.8rem">Consulting Intern — Collections Module</h3>
+          <p>Worked extensively with SQL to access and manipulate client-provided data, contributing directly to end-product delivery for O2C automated solutions.</p>
+          <div class="tag-row"><span class="tag">SQL</span><span class="tag">Collections Module</span><span class="tag">O2C</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-year">Oct 2023 — Jan 2024</div>
+        <div class="timeline-content">
+          <p class="eyebrow" style="margin-bottom:.5rem">RnPsoft Pvt. Ltd.</p>
+          <h3 style="font-size:1.8rem;margin-bottom:.8rem">Blockchain Developer Intern</h3>
+          <p>Collaborated with product teams on blockchain project requirements. Contributed to a web development project with API integrations in production workflows.</p>
+          <div class="tag-row"><span class="tag">Blockchain</span><span class="tag">Web3</span><span class="tag">API Integration</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="stats-band">
+      <div class="stat-box reveal"><div class="stat-n">1.8<em>yr</em></div><div class="stat-l">At HighRadius</div></div>
+      <div class="stat-box reveal"><div class="stat-n">5</div><div class="stat-l">Roles Held</div></div>
+      <div class="stat-box reveal"><div class="stat-n">3<em>+</em></div><div class="stat-l">Tech Stacks</div></div>
+      <div class="stat-box reveal"><div class="stat-n">∞</div><div class="stat-l">Problems Solved</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" style="padding-top:0;border-top:1px solid var(--color-border)">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">Capabilities</p><h2>Technical <em style="font-style:italic;color:var(--color-accent)">Skills</em></h2></div>
+    <div class="skills-grid">
+      <div class="skill-item reveal" style="--lvl:90%"><div class="skill-name-row"><span class="skill-n">SQL</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      <div class="skill-item reveal" style="--lvl:85%"><div class="skill-name-row"><span class="skill-n">Python</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      <div class="skill-item reveal" style="--lvl:82%"><div class="skill-name-row"><span class="skill-n">Excel &amp; Data Analysis</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      <div class="skill-item reveal" style="--lvl:78%"><div class="skill-name-row"><span class="skill-n">Data Transformation</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      <div class="skill-item reveal" style="--lvl:65%"><div class="skill-name-row"><span class="skill-n">Blockchain &amp; Web3</span><span class="skill-pct">65%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+      <div class="skill-item reveal" style="--lvl:72%"><div class="skill-name-row"><span class="skill-n">Client Implementation</span><span class="skill-pct">72%</span></div><div class="skill-track"><div class="skill-fill"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" style="padding-top:0;border-top:1px solid var(--color-border)">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">Credentials</p><h2>Certifications</h2></div>
+    <div class="certs-list">
+      <div class="cert-row reveal"><div class="cert-dot"></div><div class="cert-name">SQL (Intermediate)</div><div class="cert-issuer">HackerRank</div></div>
+      <div class="cert-row reveal"><div class="cert-dot"></div><div class="cert-name">Problem Solving (Intermediate)</div><div class="cert-issuer">HackerRank</div></div>
+      <div class="cert-row reveal"><div class="cert-dot"></div><div class="cert-name">AWS Certified Developer Associate DVA-C02</div><div class="cert-issuer">Amazon Web Services</div></div>
+      <div class="cert-row reveal"><div class="cert-dot"></div><div class="cert-name">Improving Deep Neural Networks: Hyperparameter Tuning, Regularization &amp; Optimization</div><div class="cert-issuer">DeepLearning.AI</div></div>
+      <div class="cert-row reveal"><div class="cert-dot"></div><div class="cert-name">Introduction to Computers, Operating Systems and Security</div><div class="cert-issuer">Coursera</div></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-inner"><p style="color:var(--color-text-muted);font-size:.8rem;max-width:100%">© 2026 Poojith Pinnamaraju</p><div class="footer-links"><a href="index.html" onclick="goTo(event,'index.html')">← Universe</a><a href="mailto:poojithpinnamaraju@gmail.com">Email</a><a href="https://www.linkedin.com/in/poojithpinnamaraju" target="_blank">LinkedIn</a></div></div></div></footer>
+
+<script src="assets/js/loader.js"></script>
+<script src="assets/js/cursor.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/reveal.js"></script>
+<script src="assets/js/transitions.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(a)})();
+document.querySelectorAll('a,button,.skill-item,.timeline-item').forEach(el=>{el.addEventListener('mouseenter',()=>{cd.classList.add('h');cr.classList.add('h')});el.addEventListener('mouseleave',()=>{cd.classList.remove('h');cr.classList.remove('h')})});
+function goTo(e,url){e.preventDefault();const ov=document.getElementById('page-overlay');if(ov){ov.style.transformOrigin='bottom';ov.style.transform='scaleY(1)';ov.style.transition='transform .5s cubic-bezier(.76,0,.24,1)';ov.style.pointerEvents='auto';}setTimeout(()=>window.location.href=url,510)}
+// Skill bar trigger
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('revealed');const f=e.target.querySelector('.skill-fill');if(f)setTimeout(()=>f.style.width=getComputedStyle(e.target).getPropertyValue('--lvl'),100);obs.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.skill-item').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

@@ -1,974 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Poojith Pinnamaraju</title>
-
-    <meta name="description"
-        content="Poojith Pinnamaraju | Forward Deployment Engineer | Python Developer | Speaker | Author">
-
-    <meta name="keywords"
-        content="Poojith, Portfolio, Python Developer, Forward Deployment Engineer, Speaker, Author">
-
-    <meta name="author"
-        content="Poojith Pinnamaraju">
-
-    <link rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet"
-        href="assets/css/reset.css">
-
-    <link rel="stylesheet"
-        href="assets/css/variables.css">
-
-    <link rel="stylesheet"
-        href="assets/css/typography.css">
-
-    <link rel="stylesheet"
-        href="assets/css/utilities.css">
-
-    <link rel="stylesheet"
-        href="assets/css/buttons.css">
-
-    <link rel="stylesheet"
-        href="assets/css/navigation.css">
-
-    <link rel="stylesheet"
-        href="assets/css/sections.css">
-    
-    <link rel="stylesheet"
-         href="assets/css/gallery.css">
-
-    <link rel="stylesheet"
-        href="assets/css/home.css">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Poojith Pinnamaraju — Forward Deployment Engineer, Author, Anchor, Traveller">
+<title>Poojith Pinnamaraju</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/navigation.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/cards.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<style>
+/* Cursor — mix-blend-mode dot */
+.cursor-dot{position:fixed;z-index:9999;width:8px;height:8px;border-radius:50%;background:var(--color-text);transform:translate(-50%,-50%);pointer-events:none;mix-blend-mode:difference;transition:width .2s,height .2s}
+.cursor-ring{position:fixed;z-index:9998;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,245,245,.28);transform:translate(-50%,-50%);pointer-events:none;transition:width .3s cubic-bezier(.25,1,.5,1),height .3s cubic-bezier(.25,1,.5,1)}
+.cursor-dot.h{width:16px;height:16px}
+.cursor-ring.h{width:58px;height:58px;border-color:var(--color-accent)}
+</style>
 </head>
-
 <body>
 
-<header class="navbar">
+<div class="cursor-dot" id="cd"></div>
+<div class="cursor-ring" id="cr"></div>
+<div class="page-overlay" id="page-overlay"></div>
 
-    <div class="container nav-container">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">PP</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="professional.html" onclick="navigateTo(event,'professional.html')">Professional</a></li>
+      <li><a href="author.html" onclick="navigateTo(event,'author.html')">Author</a></li>
+      <li><a href="anchor.html" onclick="navigateTo(event,'anchor.html')">Anchor</a></li>
+      <li><a href="traveller.html" onclick="navigateTo(event,'traveller.html')">Traveller</a></li>
+    </ul>
+    <div class="menu-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
 
-        <a href="#hero"
-            class="logo">
-            PP
-        </a>
+<!-- HERO -->
+<section class="hero section-large">
+  <div class="container hero-content">
+    <div class="reveal">
+      <p class="eyebrow">Hyderabad, India · 2026</p>
+    </div>
+    <h1 class="display-title reveal" style="animation-delay:.1s">
+      POOJITH<br>PINNAMARAJU
+    </h1>
+    <p class="lead reveal" style="animation-delay:.2s;margin-top:2rem">
+      Forward Deployment Engineer. Debut author. Stage anchor. World traveller.<br>
+      Obsessed with building things that matter — in code, on stage, on page, and on the road.
+    </p>
 
-        <nav>
-
-            <ul class="nav-links">
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#work">Work</a></li>
-
-                <li><a href="#professional">Professional</a></li>
-
-                <li><a href="#speaking">Speaking</a></li>
-
-                <li><a href="#writing">Writing</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
+    <!-- 4 ROLE CARDS -->
+    <div class="role-grid reveal" style="animation-delay:.3s">
+      <a href="professional.html" class="role-card" onclick="navigateTo(event,'professional.html')" onmouseenter="chover(true)" onmouseleave="chover(false)">
+        <div class="role-num">01</div>
+        <div class="role-icon">💼</div>
+        <div class="role-name">Professional</div>
+        <div class="role-arrow">↗</div>
+      </a>
+      <a href="author.html" class="role-card" onclick="navigateTo(event,'author.html')" onmouseenter="chover(true)" onmouseleave="chover(false)">
+        <div class="role-num">02</div>
+        <div class="role-icon">✍️</div>
+        <div class="role-name">Author</div>
+        <div class="role-arrow">↗</div>
+      </a>
+      <a href="anchor.html" class="role-card" onclick="navigateTo(event,'anchor.html')" onmouseenter="chover(true)" onmouseleave="chover(false)">
+        <div class="role-num">03</div>
+        <div class="role-icon">🎤</div>
+        <div class="role-name">Anchor</div>
+        <div class="role-arrow">↗</div>
+      </a>
+      <a href="traveller.html" class="role-card" onclick="navigateTo(event,'traveller.html')" onmouseenter="chover(true)" onmouseleave="chover(false)">
+        <div class="role-num">04</div>
+        <div class="role-icon">🌍</div>
+        <div class="role-name">Traveller</div>
+        <div class="role-arrow">↗</div>
+      </a>
     </div>
 
-</header>
+    <div class="button-group reveal" style="animation-delay:.4s">
+      <a href="professional.html" onclick="navigateTo(event,'professional.html')" class="btn btn-primary">Explore My Work</a>
+      <a href="mailto:poojithpinnamaraju@gmail.com" class="btn btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">Scroll</div>
+</section>
 
-<!-- ==========================
-Hero
-=========================== -->
-
-<section
-    class="hero"
-    id="hero">
-
-    <div class="container hero-content">
-
-        <span class="eyebrow">
-
-            PORTFOLIO · 2026
-
-        </span>
-
-        <h1>
-
-            POOJITH
-
-            <br>
-
-            PINNAMARAJU
-
-        </h1>
-
-        <p class="hero-description">
-
-            Forward Deployment Engineer building intelligent systems,
-            creating meaningful products,
-            speaking on stage,
-            and writing about the journey of becoming.
-
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">About</p>
+      <h2>Building technology that<br>solves meaningful problems.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1.2fr .8fr;gap:5rem;align-items:center;">
+      <div>
+        <p style="font-size:1.15rem;line-height:1.9;color:var(--color-text-secondary);margin-bottom:1.75rem;max-width:100%">
+          I'm Poojith — a Forward Deployment Engineer at HighRadius, debut author of <em style="color:var(--color-accent)">The Non-Stop Rollercoaster</em>, stage anchor, and someone who can't sit still long enough to stay in one city.
         </p>
-
-        <div class="hero-tags">
-
-            <span>Forward Deployment Engineer</span>
-
-            <span>Python Developer</span>
-
-            <span>Speaker</span>
-
-            <span>Author</span>
-
+        <p style="max-width:100%;margin-bottom:1.75rem">
+          My work lives at the crossroads of data, people, and clarity. Whether I'm transforming client data in the O2C cycle, writing about emotions that young adults are too overwhelmed to name, or holding 25,000 people through a starnight — I'm always trying to make something complicated feel simple.
+        </p>
+        <p style="max-width:100%">
+          I studied Computer Science at KIIT University, Bhubaneswar, and now call Hyderabad home.
+        </p>
+        <div class="button-group" style="margin-top:2rem">
+          <a href="https://www.linkedin.com/in/poojithpinnamaraju" target="_blank" class="btn btn-secondary">LinkedIn ↗</a>
+          <a href="https://www.instagram.com/__poojithhh__/" target="_blank" class="btn btn-secondary">Instagram ↗</a>
         </div>
-
-        <div class="button-group">
-
-            <a
-                href="#about"
-                class="btn btn-primary">
-
-                Explore My Journey
-
-            </a>
-
-            <a
-                href="#contact"
-                class="btn btn-secondary">
-
-                Contact Me
-
-            </a>
-
+      </div>
+      <div style="background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;">
+        <!-- ADD YOUR PHOTO: <img src="assets/images/shared/profile.jpg" style="width:100%;height:100%;object-fit:cover"> -->
+        <div style="text-align:center;color:var(--color-text-muted);">
+          <div style="font-size:3rem;margin-bottom:1rem;opacity:.3">📸</div>
+          <p style="font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;max-width:100%;color:var(--color-text-muted)">Add profile.jpg to<br>assets/images/shared/</p>
         </div>
-
+      </div>
     </div>
-
-    <div class="scroll-indicator">
-
-        Scroll
-
-    </div>
-
+  </div>
 </section>
 
-<!-- ==========================
-ABOUT
-=========================== -->
-
-<section
-    id="about"
-    class="content-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-label">
-
-                ABOUT
-
-            </span>
-
-            <h2 class="section-title">
-
-                Building technology that solves
-                meaningful problems.
-
-            </h2>
-
-            <p class="section-description">
-
-                I'm Poojith Pinnamaraju, a Forward Deployment Engineer with a passion
-                for building software that bridges technology and real-world impact.
-                My journey has taken me through Python development, AI-powered
-                solutions, consulting, public speaking, and writing—always driven by
-                curiosity and the desire to create meaningful experiences.
-
-            </p>
-
-        </div>
-
-        <div class="about">
-
-            <div class="about-text">
-
-                <p>
-
-                    From developing automation solutions to working directly with
-                    enterprise clients, I enjoy solving complex problems through clean,
-                    scalable engineering.
-
-                </p>
-
-                <p>
-
-                    Beyond software, I believe communication is equally important.
-                    Whether speaking at university events, leading performances,
-                    mentoring peers, or writing, I strive to make ideas accessible
-                    and inspiring.
-
-                </p>
-
-                <p>
-
-                    Every project I build reflects a simple philosophy:
-                    combine thoughtful design with practical engineering.
-
-                </p>
-
-            </div>
-
-            <div class="about-image">
-
-                <!-- Replace with your portrait -->
-
-                <img
-                    src="assets/images/shared/profile.jpg"
-                    alt="Poojith Pinnamaraju">
-
-            </div>
-
-        </div>
-
+<!-- QUICK STATS -->
+<section class="section-small" style="border-top:1px solid var(--color-border)">
+  <div class="container">
+    <div class="stats-band">
+      <div class="stat-box"><div class="stat-n">25<em>K+</em></div><div class="stat-l">Largest Crowd Anchored</div></div>
+      <div class="stat-box"><div class="stat-n">1</div><div class="stat-l">Book Coming 2026</div></div>
+      <div class="stat-box"><div class="stat-n">12<em>+</em></div><div class="stat-l">Cities Travelled</div></div>
+      <div class="stat-box"><div class="stat-n">2</div><div class="stat-l">Research Papers</div></div>
     </div>
-
+  </div>
 </section>
 
-<!-- ======================================================
-SELECTED WORK
-====================================================== -->
-
-<section
-    id="work"
-    class="content-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-label">
-
-                SELECTED WORK
-
-            </span>
-
-            <h2 class="section-title">
-
-                Building products that solve
-                real-world problems.
-
-            </h2>
-
-            <p class="section-description">
-
-                My work spans enterprise engineering, AI-powered applications,
-                automation, and customer-facing deployments. I enjoy taking ideas
-                from concept to production while focusing on performance,
-                maintainability, and user experience.
-
-            </p>
-
-        </div>
-
-        <div class="feature-grid">
-
-            <article class="feature-card">
-
-                <h3>
-
-                    Forward Deployment Engineering
-
-                </h3>
-
-                <p>
-
-                    Working directly with enterprise customers to understand
-                    complex business challenges and deliver scalable software
-                    solutions with measurable impact.
-
-                </p>
-
-            </article>
-
-            <article class="feature-card">
-
-                <h3>
-
-                    Python Development
-
-                </h3>
-
-                <p>
-
-                    Building backend systems, APIs, automation workflows,
-                    and intelligent tools using Python while focusing on
-                    clean architecture and maintainability.
-
-                </p>
-
-            </article>
-
-            <article class="feature-card">
-
-                <h3>
-
-                    AI & Product Development
-
-                </h3>
-
-                <p>
-
-                    Creating AI-driven experiences and modern web applications
-                    by combining thoughtful design with practical engineering.
-
-                </p>
-
-            </article>
-
-        </div>
-
+<!-- CONTACT -->
+<section class="section">
+  <div class="container">
+    <div style="background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015));border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:5rem;text-align:center;">
+      <p class="eyebrow" style="justify-content:center">Contact</p>
+      <h2 style="margin:1.5rem auto 1.5rem;max-width:620px">Let's build something<br>meaningful together.</h2>
+      <p style="margin:0 auto 2.5rem;max-width:500px">Whether you're looking to collaborate, discuss engineering challenges, invite me to speak, or just swap travel stories — I'm always open to a great conversation.</p>
+      <div class="button-group" style="justify-content:center">
+        <a href="mailto:poojithpinnamaraju@gmail.com" class="btn btn-primary">Send an Email</a>
+        <a href="https://www.linkedin.com/in/poojithpinnamaraju" target="_blank" class="btn btn-secondary">LinkedIn</a>
+      </div>
     </div>
-
+  </div>
 </section>
 
-<!-- ======================================================
-PROFESSIONAL EXPERIENCE
-====================================================== -->
-
-<section
-    id="professional"
-    class="content-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-label">
-
-                PROFESSIONAL
-
-            </span>
-
-            <h2 class="section-title">
-
-                Experiences that shaped
-                the engineer I am today.
-
-            </h2>
-
-        </div>
-
-        <div class="timeline">
-
-            <!-- Experience -->
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-
-                    2025 — Present
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        Forward Deployment Engineer I
-
-                    </h3>
-
-                    <p>
-
-                        Working closely with enterprise customers to deploy,
-                        customize, and optimize software solutions. My role
-                        combines engineering, consulting, and product thinking
-                        to solve complex operational challenges.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Experience -->
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-
-                    2025
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        Python Developer Intern — Quranium
-
-                    </h3>
-
-                    <p>
-
-                        Developed Python-based applications and backend
-                        components while contributing to scalable software
-                        solutions in a collaborative engineering environment.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Experience -->
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-
-                    2024
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        Technical Consulting Intern — HighRadius
-
-                    </h3>
-
-                    <p>
-
-                        Worked with SQL, enterprise datasets, and consulting
-                        workflows to deliver business insights and improve
-                        operational efficiency for clients.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- Experience -->
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-
-                    2021 — 2025
-
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-
-                        B.Tech — Computer Science & Engineering
-
-                    </h3>
-
-                    <p>
-
-                        KIIT University provided the foundation for my career
-                        through software engineering, data science, leadership,
-                        event management, and numerous technical and creative
-                        initiatives.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ======================================================
-SPEAKING
-====================================================== -->
-
-<section
-    id="speaking"
-    class="content-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-label">
-
-                SPEAKING
-
-            </span>
-
-            <h2 class="section-title">
-
-                Sharing ideas,
-                creating experiences,
-                inspiring communities.
-
-            </h2>
-
-            <p class="section-description">
-
-                Throughout university, I had the opportunity to lead large-scale
-                performances, host events, and contribute to some of KIIT's
-                biggest cultural celebrations. These experiences strengthened
-                my confidence, leadership, communication, and ability to
-                perform under pressure.
-
-            </p>
-
-        </div>
-
-        <div class="speaking-grid">
-
-            <!-- Flashmob -->
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/flashmob-1.jpg"
-                    alt="Flashmob Performance">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        Flashmob Performance
-
-                    </h3>
-
-                    <p>
-
-                        Coordinated and performed in one of KIIT's flagship
-                        flashmob events, bringing together performers,
-                        choreography, and audience engagement.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/flashmob-2.jpg"
-                    alt="Flashmob Performance">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        Flashmob Highlights
-
-                    </h3>
-
-                    <p>
-
-                        An energetic celebration of teamwork, creativity,
-                        and large-scale event execution.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <!-- Kritarth -->
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/kritarth-1.jpg"
-                    alt="Kritarth Starlight">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        Kritarth Starlight
-
-                    </h3>
-
-                    <p>
-
-                        Led one of KIIT's major evening events,
-                        managing stage presence and audience engagement.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/kritarth-2.jpg"
-                    alt="Kritarth Starlight">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        Event Hosting
-
-                    </h3>
-
-                    <p>
-
-                        Delivering high-energy presentations while
-                        coordinating performers and event flow.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/kritarth-3.jpg"
-                    alt="Kritarth Stage">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        Stage Leadership
-
-                    </h3>
-
-                    <p>
-
-                        Creating memorable experiences through confident
-                        communication and audience interaction.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <!-- KIIT Fest -->
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/kiitfest-1.jpg"
-                    alt="KIIT Fest">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        KIIT Fest Starlight
-
-                    </h3>
-
-                    <p>
-
-                        Hosting one of the university's largest
-                        annual cultural celebrations.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-            <article class="speaking-card">
-
-                <img
-                    src="assets/images/speaking/kiitfest-2.jpg"
-                    alt="KIIT Fest">
-
-                <div class="speaking-info">
-
-                    <h3>
-
-                        Grand Inauguration
-
-                    </h3>
-
-                    <p>
-
-                        Delivering stage presentations for large audiences
-                        during flagship university events.
-
-                    </p>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ======================================================
-WRITING
-====================================================== -->
-
-<section
-    id="writing"
-    class="content-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-label">
-
-                WRITING
-
-            </span>
-
-            <h2 class="section-title">
-
-                Writing to help people
-                navigate uncertainty.
-
-            </h2>
-
-            <p class="section-description">
-
-                Beyond engineering, I enjoy writing about growth,
-                self-discovery, and the confusing emotions that many
-                people experience in their early twenties.
-
-            </p>
-
-        </div>
-
-        <div class="book">
-
-            <div class="book-cover">
-
-                <img
-                    src="assets/images/writing/book-cover.jpg"
-                    alt="Book Cover">
-
-            </div>
-
-            <div class="book-content">
-
-                <h3>
-
-                    Belonging in Shared Struggles
-
-                </h3>
-
-                <p>
-
-                    This book explores the uncertainty that many people
-                    quietly carry while navigating adulthood.
-                    Through relatable stories and reflections,
-                    it reminds readers that confusion is a shared human
-                    experience rather than a personal failure.
-
-                </p>
-
-                <p>
-
-                    The goal isn't to provide all the answers,
-                    but to offer reassurance that growth often begins
-                    with uncertainty.
-
-                </p>
-
-                <a
-                    href="#contact"
-                    class="btn btn-primary">
-
-                    Learn More
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!-- ======================================================
-CONTACT
-====================================================== -->
-
-<section
-    id="contact"
-    class="content-section">
-
-    <div class="container">
-
-        <div class="contact-box">
-
-            <span class="section-label">
-
-                CONTACT
-
-            </span>
-
-            <h2>
-
-                Let's build something meaningful together.
-
-            </h2>
-
-            <p>
-
-                Whether you're looking to collaborate on innovative products,
-                discuss engineering challenges, invite me to speak, or simply
-                connect over technology and ideas, I'd love to hear from you.
-
-            </p>
-
-            <div class="button-group">
-
-                <a
-                    href="mailto:YOUR_EMAIL_HERE"
-                    class="btn btn-primary">
-
-                    Send an Email
-
-                </a>
-
-                <a
-                    href="https://linkedin.com/in/YOUR_LINKEDIN"
-                    target="_blank"
-                    class="btn btn-secondary">
-
-                    LinkedIn
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ======================================================
-FOOTER
-====================================================== -->
-
+<!-- FOOTER -->
 <footer>
-
-    <div class="container footer-inner">
-
-        <div>
-
-            <h3>
-
-                Poojith Pinnamaraju
-
-            </h3>
-
-            <p>
-
-                Forward Deployment Engineer • Python Developer • Speaker • Author
-
-            </p>
-
-        </div>
-
-        <div class="footer-links">
-
-            <a
-                href="#hero">
-
-                Home
-
-            </a>
-
-            <a
-                href="#about">
-
-                About
-
-            </a>
-
-            <a
-                href="#work">
-
-                Work
-
-            </a>
-
-            <a
-                href="#speaking">
-
-                Speaking
-
-            </a>
-
-            <a
-                href="#writing">
-
-                Writing
-
-            </a>
-
-            <a
-                href="#contact">
-
-                Contact
-
-            </a>
-
-        </div>
-
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family:var(--font-heading);font-size:1.2rem;color:var(--color-text);margin-bottom:.3rem">Poojith Pinnamaraju</div>
+        <div style="font-size:.75rem;color:var(--color-text-muted)">Engineer · Author · Anchor · Traveller</div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="professional.html" onclick="navigateTo(event,'professional.html')">Professional</a>
+        <a href="author.html" onclick="navigateTo(event,'author.html')">Author</a>
+        <a href="anchor.html" onclick="navigateTo(event,'anchor.html')">Anchor</a>
+        <a href="traveller.html" onclick="navigateTo(event,'traveller.html')">Traveller</a>
+      </div>
     </div>
-
+  </div>
 </footer>
 
-<!-- ======================================================
-SCRIPTS
-====================================================== -->
-
-<script src="assets/js/navigation.js"></script>
-
-<script src="assets/js/reveal.js"></script>
-
-<script src="assets/js/cursor.js"></script>
-
 <script src="assets/js/loader.js"></script>
-
+<script src="assets/js/cursor.js"></script>
+<script src="assets/js/navigation.js"></script>
+<script src="assets/js/reveal.js"></script>
+<script src="assets/js/transitions.js"></script>
 <script src="assets/js/gallery.js"></script>
-
 <script src="assets/js/main.js"></script>
+<script>
+// custom cursor
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+let mx=0,my=0,rx=0,ry=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(a)})();
+function chover(h){cd.classList.toggle('h',h);cr.classList.toggle('h',h)}
+document.querySelectorAll('a,.role-card,.btn').forEach(el=>{el.addEventListener('mouseenter',()=>chover(true));el.addEventListener('mouseleave',()=>chover(false))});
 
+function navigateTo(e,url){
+  e.preventDefault();
+  const ov=document.getElementById('page-overlay');
+  if(ov){ov.style.transformOrigin='bottom';ov.style.transform='scaleY(1)';ov.style.transition='transform .5s cubic-bezier(.76,0,.24,1)';ov.style.pointerEvents='auto';}
+  setTimeout(()=>window.location.href=url,510);
+}
+</script>
 </body>
-
 </html>

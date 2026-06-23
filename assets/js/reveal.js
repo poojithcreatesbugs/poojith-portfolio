@@ -1,55 +1,21 @@
-/* ==========================================================
-   POOJITH PORTFOLIO V2
-   reveal.js
-   Scroll Reveal Animations
-========================================================== */
-
+/* reveal.js — scroll reveal */
 document.addEventListener("DOMContentLoaded", () => {
-
-    initializeRevealAnimations();
-
-});
-
-function initializeRevealAnimations() {
-
-    const revealElements = document.querySelectorAll(
-        ".section-header, .feature-card, .timeline-item, .speaking-card, .book, .contact-box"
-    );
-
-    const observer = new IntersectionObserver(
-
-        (entries) => {
-
-            entries.forEach((entry) => {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.classList.add("revealed");
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-
-        {
-
-            threshold: 0.15,
-
-            rootMargin: "0px 0px -80px 0px"
-
-        }
-
-    );
-
-    revealElements.forEach((element) => {
-
-        element.classList.add("reveal");
-
-        observer.observe(element);
-
+  const els = document.querySelectorAll(
+    ".section-header, .feature-card, .timeline-item, .speaking-card, .book, .contact-box, .reveal, .skill-item, .cert-row, .why-item, .paper-item, .vol-item, .event-block, .dest-card, .stat-box"
+  );
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add("revealed");
+        obs.unobserve(e.target);
+      }
     });
-
-}
+  }, { threshold: 0.08, rootMargin: "0px 0px -60px 0px" });
+  els.forEach((el, i) => {
+    if (!el.classList.contains("skill-item") && !el.classList.contains("cert-row") && !el.classList.contains("why-item") && !el.classList.contains("paper-item") && !el.classList.contains("vol-item") && !el.classList.contains("event-block") && !el.classList.contains("stat-box")) {
+      el.classList.add("reveal");
+    }
+    el.style.transitionDelay = Math.min(i % 4 * 0.08, 0.32) + "s";
+    obs.observe(el);
+  });
+});

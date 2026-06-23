@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Author — Poojith Pinnamaraju</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/typography.css">
+<link rel="stylesheet" href="assets/css/utilities.css">
+<link rel="stylesheet" href="assets/css/buttons.css">
+<link rel="stylesheet" href="assets/css/navigation.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/cards.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/writing.css">
+<link rel="stylesheet" href="assets/css/professional.css">
+<style>
+.cursor-dot{position:fixed;z-index:9999;width:8px;height:8px;border-radius:50%;background:var(--color-text);transform:translate(-50%,-50%);pointer-events:none;mix-blend-mode:difference;transition:width .2s,height .2s}
+.cursor-ring{position:fixed;z-index:9998;width:32px;height:32px;border-radius:50%;border:1px solid rgba(245,245,245,.28);transform:translate(-50%,-50%);pointer-events:none;transition:width .3s cubic-bezier(.25,1,.5,1),height .3s cubic-bezier(.25,1,.5,1)}
+.cursor-dot.h{width:16px;height:16px}.cursor-ring.h{width:58px;height:58px;border-color:var(--color-accent)}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cd"></div><div class="cursor-ring" id="cr"></div>
+<div class="page-overlay" id="page-overlay"></div>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div style="display:flex;align-items:center;gap:1.5rem">
+      <a href="index.html" onclick="goTo(event,'index.html')" style="font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-text-muted);text-decoration:none" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text-muted)'">← Universe</a>
+      <div style="width:1px;height:14px;background:var(--color-border)"></div>
+      <span style="font-family:var(--font-heading);font-size:1rem;color:var(--color-text)">Author</span>
+    </div>
+    <span style="font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-text-muted)">Poojith Pinnamaraju</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="section-large" style="min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:5rem;position:relative;overflow:hidden">
+  <div class="page-hero-bg-word">Words</div>
+  <div class="container">
+    <div class="reveal"><p class="page-hero-eyebrow">Author · Written Words</p>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(3.5rem,8vw,7.5rem);font-weight:400;line-height:.93;letter-spacing:-.03em;color:var(--color-text)">Where Feelings <em style="font-style:italic;color:var(--color-accent)">Find Pages</em></h1></div>
+    <p class="reveal page-hero-sub" style="animation-delay:.12s">I write to create clarity, to make the interior life of young adults visible and shared — because all the feelings you are feeling, they happen to everyone.</p>
+  </div>
+</section>
+
+<!-- DEBUT BOOK -->
+<section class="section" style="border-top:1px solid var(--color-border)">
+  <div class="container">
+    <div class="reveal"><p class="eyebrow">Debut Book · 2026</p></div>
+    <div class="book-spread reveal" style="margin-top:2rem">
+      <div class="book-left">
+        <div>
+          <div class="book-type-tag">First Book · Upcoming</div>
+          <div class="book-title-big">The Non-Stop<br>Rollercoaster</div>
+          <div class="book-tagline">Because every emotion you've ever felt? Someone else is feeling it right now too.</div>
+          <div class="book-badge">Expected Before August 2026</div>
+        </div>
+        <div style="margin-top:2.5rem">
+          <p style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-muted);max-width:100%">Genre: Personal Essays · Young Adults · Emotions</p>
+        </div>
+      </div>
+      <div class="book-right">
+        <div class="book-desc-block">
+          <p>A book about the beautiful, exhausting, confusing ride of being a young adult today. About how <strong>confused people create confused emotions</strong> — and how <strong>naming what you feel</strong> is the first step to making sense of it all.</p>
+          <p>This isn't a self-help book. It's a <strong>mirror</strong>. The kind that makes you feel less alone at 2am when everything feels like too much. Written for everyone who's ever thought "why does no one talk about this?" — because they do. They just haven't found the words yet.</p>
+          <p>This book is for the confused, the overwhelmed, and the ones who feel everything deeply. <strong>You are not alone in this.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE -->
+<div class="pull-quote reveal">
+  <div class="container">
+    <p class="pq-text">"All the feelings you are feeling — they happen to everyone. You are not alone in this."</p>
+    <p class="pq-credit">— The core message of The Non-Stop Rollercoaster</p>
+  </div>
+</div>
+
+<!-- WHY I WRITE -->
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">Philosophy</p><h2>Why I <em style="font-style:italic;color:var(--color-accent)">Write</em></h2></div>
+    <div class="why-grid">
+      <div class="why-item reveal"><div class="why-num">01</div><div class="why-title">To Create Clarity</div><p class="why-body">Emotions are messy. Language makes them manageable. The moment you can name something — the anxiety, the loneliness, the weird joy mixed with grief — it loses a little of its power over you.</p></div>
+      <div class="why-item reveal"><div class="why-num">02</div><div class="why-title">To Say You're Not Alone</div><p class="why-body">The feeling that nobody else understands is one of the loneliest feelings there is. Every page says: they do. It happens to everyone. You're not broken — you're just in the middle of it.</p></div>
+      <div class="why-item reveal"><div class="why-num">03</div><div class="why-title">To Make Life Relatable</div><p class="why-body">We're surrounded by confused people giving confused messages about how we should feel. I write to cut through that — to make the interior life visible, valid, and shared.</p></div>
+      <div class="why-item reveal"><div class="why-num">04</div><div class="why-title">To Express, Not Explain</div><p class="why-body">I'm not here to diagnose or prescribe. I write to express — to let the feeling breathe on the page so that when you read it, something in you recognises itself and exhales.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section" style="padding-top:0;border-top:1px solid var(--color-border)">
+  <div class="container">
+    <div class="section-heading reveal"><p class="eyebrow">Academic Writing</p><h2>Research <em style="font-style:italic;color:var(--color-accent)">Papers</em></h2></div>
+    <div>
+      <div class="paper-item reveal">
+        <div class="paper-n">01</div>
+        <div>
+          <div class="paper-field">NLP · Published</div>
+          <div class="paper-title">Text Emotion Analysis using Sentiment Analysis</div>
+          <p class="paper-desc">A system combining ML and NLP to identify emotions in Twitter and Kaggle data — generating insights on social media sentiment trends bridging research and real-world application.</p>
+          <div class="tag-row"><span class="tag">NLP</span><span class="tag">Sentiment Analysis</span><span class="tag">Twitter</span><span class="tag">Machine Learning</span></div>
+        </div>
+      </div>
+      <div class="paper-item reveal">
+        <div class="paper-n">02</div>
+        <div>
+          <div class="paper-field">Deep Learning · Published</div>
+          <div class="paper-title">Wage Management Using 3-D CNN</div>
+          <p class="paper-desc">Applying 3D Convolutional Neural Networks — typically used for video processing — to structured financial wage data. Proving spatial reasoning from computer vision can solve temporal-economic problems.</p>
+          <div class="tag-row"><span class="tag">3D CNN</span><span class="tag">Computer Vision</span><span class="tag">Finance</span><span class="tag">Deep Learning</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container"><div class="footer-inner"><p style="color:var(--color-text-muted);font-size:.8rem;max-width:100%">© 2026 Poojith Pinnamaraju</p><div class="footer-links"><a href="index.html" onclick="goTo(event,'index.html')">← Universe</a><a href="mailto:poojithpinnamaraju@gmail.com">Contact</a></div></div></div></footer>
+
+<script src="assets/js/loader.js"></script><script src="assets/js/cursor.js"></script><script src="assets/js/navigation.js"></script><script src="assets/js/reveal.js"></script><script src="assets/js/transitions.js"></script><script src="assets/js/main.js"></script>
+<script>
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');let mx=0,my=0,rx=0,ry=0;
+window.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cd.style.left=mx+'px';cd.style.top=my+'px'});
+(function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;cr.style.left=rx+'px';cr.style.top=ry+'px';requestAnimationFrame(a)})();
+document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cd.classList.add('h');cr.classList.add('h')});el.addEventListener('mouseleave',()=>{cd.classList.remove('h');cr.classList.remove('h')})});
+function goTo(e,url){e.preventDefault();const ov=document.getElementById('page-overlay');if(ov){ov.style.transformOrigin='bottom';ov.style.transform='scaleY(1)';ov.style.transition='transform .5s cubic-bezier(.76,0,.24,1)';ov.style.pointerEvents='auto';}setTimeout(()=>window.location.href=url,510)}
+</script>
+</body>
+</html>
